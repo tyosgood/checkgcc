@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Tyler Osgood">
+    <title>GCC Checker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  </head>
+  <body>
+    
+<div class="col-lg-6 mx-auto p-4 py-md-5">
+  <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+    
+      <span class="fs-4">Office 365 GCC Check</span>
+    
+  </header>
+
+  <main>
+    
+    <p class="fs-5">Enter a domain below to check if that customer is using Microsoft's GCC, GCC-High or DoD Office 365 cloud services.</p>
+
+            <form action="javascript:void(0);">
+            <div class="row">
+              <div class="col">
+                 <input type="text" class="form-control" id="site" placeholder="example.gov">
+              </div>
+              <div class="col">
+                <button type="submit" class="btn btn-primary mb-2" onclick="getGCC()">Check</button>
+              </div>
+            </div>
+          </form>
+   
+    <hr class="col-5 col-md-2 mb-5">
+
+      <div class="card mb-8" style="display: none" id="results">
+        <div class="card-header" id="result_title"></div>
+        <div class="row g-0">
+          <div class="col-md-2" style="display:none" id="fedramp_logo" >
+            <img src="images/fedramp-logo-vert.svg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-3" style="display:none" id="dod_logo">
+            <img src="images/DoD.svg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title" id ="parsed_response"></h5>
+                <p class="card-text" id="response_detail"></p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div id="json_toggle" style="display: none">
+      <button class="btn btn-primary"  type="button" data-bs-toggle="collapse" data-bs-target="#json_collapse" aria-expanded="false" aria-controls="collapseExample">
+        Show Raw JSON Response
+      </button>
+      <div class="collapse" id="json_collapse">
+        <div class="card card-body" id="raw_json">
+
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="pt-5 my-5 text-muted border-top">
+    Created by Tyler Osgood &middot; &copy; 2022
+  </footer>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<script src="getGCC.js"></script>    
+      
+  </body>
+</html>
