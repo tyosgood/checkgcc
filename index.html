@@ -20,7 +20,7 @@
 
   <main>
     
-    <p class="fs-5">Enter a domain below to check if that customer is using Microsoft's GCC, GCC-High or DoD Office 365 cloud services.</p>
+    <p class="fs-5">Enter am email domain below to check if that customer is using Microsoft's GCC, GCC-High or DoD Office 365 cloud services.</p>
 
             <form action="javascript:void(0);">
             <div class="row">
@@ -74,7 +74,7 @@
       <div class="collapse" id="aboutPage">
         <div class="card card-body">
         <p>
-          This page uses the fetch() method in javascript on the client to query Microsoft about the status of the entered domain. This query returns the GCC status in JSON, but it's a bit cryptic, so this page interprets the results and returns an easy to understand status.
+          This page uses the fetch() method in javascript on the client to query Microsoft about the status of the entered email domain. This query returns the GCC status in JSON, but it's a bit cryptic, so this page interprets the results (specifically tenant_region_scope and tenant_region_sub_scope) and returns an easy to understand status.
           For more information about Microsoft GCC see: <a href="https://docs.microsoft.com/en-us/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/office-365-us-government" target="_blank">Office 365 Government</a>
         </p>
         </div>
